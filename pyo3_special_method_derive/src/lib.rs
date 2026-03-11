@@ -33,7 +33,7 @@ use std::{
     },
 };
 
-pub use pyo3_special_method_derive_macro::*;
+pub use pyo3_special_method_derive_macro_latest_pyo3::*;
 
 /// Number of *characters* to display for each implementation in this crate,
 /// defaults to 100. May be a few chars above or below.

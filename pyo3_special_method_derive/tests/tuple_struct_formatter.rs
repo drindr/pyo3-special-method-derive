@@ -1,5 +1,5 @@
 use pyo3::pyclass;
-use pyo3_special_method_derive::Str;
+use pyo3_special_method_derive_latest_pyo3::Str;
 
 #[pyclass]
 #[derive(Str)]

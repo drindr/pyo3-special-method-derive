@@ -4,7 +4,7 @@ use pyo3::{
     types::{PyModule, PyModuleMethods},
     Bound, PyResult, Python,
 };
-use pyo3_special_method_derive::{AutoDebug, AutoDisplay, Dict, Dir, Getattr, Repr, Str};
+use pyo3_special_method_derive_latest_pyo3::{AutoDebug, AutoDisplay, Dict, Dir, Getattr, Repr, Str};
 use std::collections::HashMap;
 use std::str::FromStr;
 use std::sync::{Arc, RwLock};

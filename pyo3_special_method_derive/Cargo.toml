@@ -1,5 +1,5 @@
 [package]
-name = "pyo3_special_method_derive"
+name = "pyo3_special_method_derive_latest_pyo3"
 version.workspace = true
 edition.workspace = true
 description.workspace = true
@@ -8,5 +8,5 @@ repository.workspace = true
 
 [dependencies]
 # pyo3_special_method_derive_macro = "0.4.2"
-pyo3_special_method_derive_macro.workspace = true
+pyo3_special_method_derive_macro_latest_pyo3.workspace = true
 pyo3.workspace = true

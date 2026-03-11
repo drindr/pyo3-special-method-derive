@@ -1,5 +1,5 @@
 [package]
-name = "pyo3_special_method_derive_example"
+name = "pyo3_special_method_derive_example_latest_pyo3"
 version.workspace = true
 edition.workspace = true
 description.workspace = true
@@ -8,7 +8,7 @@ repository.workspace = true
 
 [dependencies]
 pyo3.workspace = true
-pyo3_special_method_derive = {path = "../pyo3_special_method_derive"}
+pyo3_special_method_derive_latest_pyo3 = {path = "../pyo3_special_method_derive"}
 log = "0.4"
 env_logger = "0.9"
 

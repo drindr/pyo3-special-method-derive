@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 use pyo3::{pyclass, types::PyAnyMethods, Python};
-use pyo3_special_method_derive::Dict;
+use pyo3_special_method_derive_latest_pyo3::Dict;
 
 #[derive(PartialEq)]
 #[pyclass(eq, eq_int)]

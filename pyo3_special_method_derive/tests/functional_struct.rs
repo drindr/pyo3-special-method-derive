@@ -1,5 +1,5 @@
 use pyo3::pyclass;
-use pyo3_special_method_derive::{Dir, Getattr, Repr, Str};
+use pyo3_special_method_derive_latest_pyo3::{Dir, Getattr, Repr, Str};
 
 #[pyclass]
 #[derive(Dir, Str, Repr)]

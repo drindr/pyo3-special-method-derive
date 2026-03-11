@@ -1,5 +1,5 @@
 [package]
-name = "pyo3_special_method_derive_macro"
+name = "pyo3_special_method_derive_macro_latest_pyo3"
 version.workspace = true
 edition.workspace = true
 description.workspace = true

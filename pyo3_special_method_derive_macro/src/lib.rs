@@ -42,7 +42,7 @@ fn implements_display(ty: &Ident) -> bool {
 /// ## Example
 /// ```ignore
 /// use pyo3::pyclass;
-/// use pyo3_special_method_derive::Dir;
+/// use pyo3_special_method_derive_latest_pyo3::Dir;
 /// #[pyclass]
 /// #[derive(Dir)]
 /// struct Person {
@@ -257,7 +257,7 @@ pub fn dir_derive(input: TokenStream) -> TokenStream {
 ///
 /// ```ignore
 /// use pyo3::pyclass;
-/// use pyo3_special_method_derive::Str;
+/// use pyo3_special_method_derive_latest_pyo3::Str;
 /// #[pyclass]
 /// #[derive(Str)]
 /// #[format(fmt = "{}.{}")]
@@ -272,7 +272,7 @@ pub fn dir_derive(input: TokenStream) -> TokenStream {
 ///
 /// ```ignore
 /// use pyo3::pyclass;
-/// use pyo3_special_method_derive::Str;
+/// use pyo3_special_method_derive_latest_pyo3::Str;
 /// #[pyclass]
 /// #[derive(Str)]
 /// #[format(fmt = "{}({})")]
@@ -287,7 +287,7 @@ pub fn dir_derive(input: TokenStream) -> TokenStream {
 /// ## Example
 /// ```ignore
 /// use pyo3::pyclass;
-/// use pyo3_special_method_derive::Str;
+/// use pyo3_special_method_derive_latest_pyo3::Str;
 /// #[pyclass]
 /// #[derive(Str)]
 /// struct Person {
@@ -315,7 +315,7 @@ pub fn str_derive(input_stream: TokenStream) -> TokenStream {
         #[pyo3::pymethods]
         impl #name {
             pub fn __str__(&self) -> String {
-                use pyo3_special_method_derive::PyDisplay;
+                use pyo3_special_method_derive_latest_pyo3::PyDisplay;
                 self.fmt_display()
             }
         }
@@ -332,7 +332,7 @@ pub fn str_derive(input_stream: TokenStream) -> TokenStream {
 /// By default it is `{}.{}`. The format string takes 2 (filled in as name, variant), 1 (filled in as name), or 0 formatters:
 ///
 /// ```ignore
-/// use pyo3_special_method_derive::AutoDisplay;
+/// use pyo3_special_method_derive_latest_pyo3::AutoDisplay;
 /// #[derive(AutoDisplay)]
 /// #[format(fmt = "{}.{}")]
 /// enum Person {
@@ -345,7 +345,7 @@ pub fn str_derive(input_stream: TokenStream) -> TokenStream {
 /// By default it is `{}({})`. The format string takes 2 (filled in as name, fields), 1 (filled in as name), or 0 formatters:
 ///
 /// ```ignore
-/// use pyo3_special_method_derive::AutoDisplay;
+/// use pyo3_special_method_derive_latest_pyo3::AutoDisplay;
 /// #[derive(AutoDisplay)]
 /// #[format(fmt = "{}({})")]
 /// struct Mountain {
@@ -361,7 +361,7 @@ pub fn str_derive(input_stream: TokenStream) -> TokenStream {
 /// The `formatter` also has other uses, outlined below:
 ///
 /// ```ignore
-/// use pyo3_special_method_derive::AutoDisplay;
+/// use pyo3_special_method_derive_latest_pyo3::AutoDisplay;
 /// #[derive(AutoDisplay)]
 /// struct Person {
 ///     pub name: String,
@@ -393,7 +393,7 @@ pub fn auto_display(input_stream: TokenStream) -> TokenStream {
 
             impl std::fmt::Display for #name {
                 fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-                    use pyo3_special_method_derive::PyDisplay;
+                    use pyo3_special_method_derive_latest_pyo3::PyDisplay;
                     write!(f, "{}", self.fmt_display())
                 }
             }
@@ -418,7 +418,7 @@ pub fn auto_display(input_stream: TokenStream) -> TokenStream {
 ///
 /// ```ignore
 /// use pyo3::pyclass;
-/// use pyo3_special_method_derive::Repr;
+/// use pyo3_special_method_derive_latest_pyo3::Repr;
 /// #[pyclass]
 /// #[format(fmt = "{}.{}")]
 /// enum Person {
@@ -432,7 +432,7 @@ pub fn auto_display(input_stream: TokenStream) -> TokenStream {
 ///
 /// ```ignore
 /// use pyo3::pyclass;
-/// use pyo3_special_method_derive::Repr;
+/// use pyo3_special_method_derive_latest_pyo3::Repr;
 /// #[pyclass]
 /// #[format(fmt = "{}({})")]
 /// struct Mountain {
@@ -446,7 +446,7 @@ pub fn auto_display(input_stream: TokenStream) -> TokenStream {
 /// ## Example
 /// ```ignore
 /// use pyo3::pyclass;
-/// use pyo3_special_method_derive::Repr;
+/// use pyo3_special_method_derive_latest_pyo3::Repr;
 /// #[pyclass]
 /// #[derive(Repr)]
 /// struct Person {
@@ -476,7 +476,7 @@ pub fn repr_derive(input_stream: TokenStream) -> TokenStream {
         #[pyo3::pymethods]
         impl #name {
             pub fn __repr__(&self) -> String {
-                use pyo3_special_method_derive::PyDebug;
+                use pyo3_special_method_derive_latest_pyo3::PyDebug;
                 self.fmt_debug()
             }
         }
@@ -493,7 +493,7 @@ pub fn repr_derive(input_stream: TokenStream) -> TokenStream {
 /// By default it is `{}.{}`. The format string takes 2 (filled in as name, variant), 1 (filled in as name), or 0 formatters:
 ///
 /// ```ignore
-/// use pyo3_special_method_derive::AutoDebug;
+/// use pyo3_special_method_derive_latest_pyo3::AutoDebug;
 /// #[derive(AutoDebug)]
 /// #[format(fmt = "{}.{}")]
 /// enum Person {
@@ -506,7 +506,7 @@ pub fn repr_derive(input_stream: TokenStream) -> TokenStream {
 /// By default it is `{}({})`. The format string takes 2 (filled in as name, fields), 1 (filled in as name), or 0 formatters:
 ///
 /// ```ignore
-/// use pyo3_special_method_derive::AutoDebug;
+/// use pyo3_special_method_derive_latest_pyo3::AutoDebug;
 /// #[derive(AutoDebug)]
 /// #[format(fmt = "{}({})")]
 /// struct Mountain {
@@ -523,7 +523,7 @@ pub fn repr_derive(input_stream: TokenStream) -> TokenStream {
 ///
 /// ## Example
 /// ```ignore
-/// use pyo3_special_method_derive::AutoDebug;
+/// use pyo3_special_method_derive_latest_pyo3::AutoDebug;
 /// #[derive(AutoDebug)]
 /// struct Person {
 ///     pub name: String,
@@ -553,7 +553,7 @@ pub fn auto_debug(input_stream: TokenStream) -> TokenStream {
 
             impl std::fmt::Debug for #name {
                 fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-                    use pyo3_special_method_derive::PyDebug;
+                    use pyo3_special_method_derive_latest_pyo3::PyDebug;
                     write!(f, "{}", self.fmt_debug())
                 }
             }
@@ -572,7 +572,7 @@ pub fn auto_debug(input_stream: TokenStream) -> TokenStream {
 /// ## Example
 /// ```ignore
 /// use pyo3::pyclass;
-/// use pyo3_special_method_derive::Getattr;
+/// use pyo3_special_method_derive_latest_pyo3::Getattr;
 /// #[pyclass]
 /// #[derive(Getattr)]
 /// struct Person {
@@ -801,7 +801,7 @@ pub fn getattr_derive(input: TokenStream) -> TokenStream {
 /// ## Example
 /// ```ignore
 /// use pyo3::pyclass;
-/// use pyo3_special_method_derive::Dict;
+/// use pyo3_special_method_derive_latest_pyo3::Dict;
 /// #[pyclass]
 /// #[derive(Dict)]
 /// struct Person {

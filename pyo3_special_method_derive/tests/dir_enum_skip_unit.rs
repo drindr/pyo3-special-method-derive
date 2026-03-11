@@ -1,5 +1,5 @@
 use pyo3::pyclass;
-use pyo3_special_method_derive::Dir;
+use pyo3_special_method_derive_latest_pyo3::Dir;
 
 #[derive(PartialEq)]
 #[pyclass(eq, eq_int)]

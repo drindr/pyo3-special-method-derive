@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use pyo3_special_method_derive::PyDisplay;
+use pyo3_special_method_derive_latest_pyo3::PyDisplay;
 
 #[test]
 fn vec() {

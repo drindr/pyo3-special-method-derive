@@ -161,25 +161,25 @@ dependencies = [
 ]
 
 [[package]]
-name = "pyo3_special_method_derive"
-version = "0.4.3"
-dependencies = [
- "pyo3",
- "pyo3_special_method_derive_macro",
-]
-
-[[package]]
-name = "pyo3_special_method_derive_example"
+name = "pyo3_special_method_derive_example_latest_pyo3"
 version = "0.4.3"
 dependencies = [
  "env_logger",
  "log",
  "pyo3",
- "pyo3_special_method_derive",
+ "pyo3_special_method_derive_latest_pyo3",
 ]
 
 [[package]]
-name = "pyo3_special_method_derive_macro"
+name = "pyo3_special_method_derive_latest_pyo3"
+version = "0.4.3"
+dependencies = [
+ "pyo3",
+ "pyo3_special_method_derive_macro_latest_pyo3",
+]
+
+[[package]]
+name = "pyo3_special_method_derive_macro_latest_pyo3"
 version = "0.4.3"
 dependencies = [
  "proc-macro2",
